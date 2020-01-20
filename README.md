@@ -29,6 +29,7 @@ const ipRetriever = require("retrieve-ip")
  import retrieveIp from 'retrieveIp'
  // This will retrieve the first matched IPv4 OR IPv6 ip address on any interface, regardless of whether the IP is local or not
  const currentIP = retrieveIp("all", "all", true, 1)
+ ```
 
 ## Typescript
 You can choose to use typescript/index.ts instead if you want to use the source file.  Otherwise, the index.d.ts is already included
