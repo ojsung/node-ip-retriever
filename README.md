@@ -3,7 +3,7 @@ Retrieves the IP addresses of your machine using os.networkInterfaces().  I hone
 ## How to use
 Use the default import from ip-retriever
 ```javascript
-const ipRetriever = require("ip-retriever")
+const ipRetriever = require("retrieve-ip")
 ```
 
 ## Parameters
@@ -17,11 +17,18 @@ const ipRetriever = require("ip-retriever")
  */
  ```
  
- ## Example
+ ## Node Example
  ```javascript
- const ipRetriever = require("ip-retriever")
+ const retrieveIp = require("retrieve-ip").default
  // This will retrieve all IPv6 addresses on the "Wi-Fi" interface that are not local.
- const currentIP = ipRetriever("IPv6", "Wi-Fi", false, -1)
+ const currentIP = retrieveIp("IPv6", "Wi-Fi", false, -1)
+ ```
+ 
+ ## Node Typescript Example
+ ```typescript
+ import retrieveIp from 'retrieveIp'
+ // This will retrieve the first matched IPv4 OR IPv6 ip address on any interface, regardless of whether the IP is local or not
+ const currentIP = retrieveIp("all", "all", true, 1)
  ```
 
 ## Typescript
