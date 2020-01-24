@@ -22,10 +22,9 @@ class MatchMaker {
         this.countToRetrieve = countToRetrieve;
         this.retrieveLocal = retrieveLocal;
         this.interfaces = os_1.networkInterfaces();
-        this._matchedInterfaceInfo = [];
         this.interfaceMatcher = this.matcherGenerator(ifName);
         this.interfaceInfoMatcher = this.matcherGenerator(ipFamily);
-        this.checkForMatches();
+        this._matchedInterfaceInfo = this.checkForMatches();
     }
     get matchedInterfaceInfo() {
         return this._matchedInterfaceInfo;

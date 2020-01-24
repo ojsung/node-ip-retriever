@@ -29,7 +29,7 @@ class MatchMaker {
   ) {
     this.interfaceMatcher = this.matcherGenerator(ifName)
     this.interfaceInfoMatcher = this.matcherGenerator(ipFamily)
-    this.checkForMatches()
+    this._matchedInterfaceInfo = this.checkForMatches()
   }
 
   // These two callbacks are currently undefined, but will be used to match the name of the interface, then to match the
@@ -41,7 +41,7 @@ class MatchMaker {
     return this._matchedInterfaceInfo
   }
 
-  private _matchedInterfaceInfo: string[] = []
+  private _matchedInterfaceInfo: string[]
 
   private checkForMatches(): string[] {
     const ips: string[] = []
